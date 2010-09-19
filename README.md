@@ -1,5 +1,10 @@
-The DataZombies jQTouch fork
+Eric Clemmons' jQTouch fork
 =======
+
+- Added `-moz` rules for making it easier to import jQTouch apps onto the desktop
+- Pulled in [DataZombie's](git://github.com/DataZombies/jQTouch.git)
+for extensions & [bjoernwibben](git://github.com/bjoernwibben/jQTouch.git)'s fork for
+the Retina display capability.
 
 Fixed
 ------------------------------------------------------------
