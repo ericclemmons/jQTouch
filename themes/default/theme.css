@@ -2,8 +2,14 @@ body {
     background: #000;
     color: #ddd;
 }
+
+#jqt a > img {
+    border: none;
+}
+
 div#jqt > * {
     background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#333), to(#5e5e65));
+    background: -moz-linear-gradient(-90deg, #333, #5e5e65);
 }
 #jqt h1, #jqt h2 {
     font: bold 18px "Helvetica Neue", Helvetica;
@@ -14,6 +20,7 @@ div#jqt > * {
 /* @group Toolbar */
 #jqt .toolbar {
     -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     border-bottom: 1px solid #000;
     padding: 10px;
     height: 45px;
@@ -65,6 +72,7 @@ div#jqt.landscape .toolbar > h1 {
     white-space: nowrap;
     background: none;
     -webkit-border-image: url(img/button.png) 0 5 0 5;
+    -moz-border-image: url(img/button.png) 0 5 0 5;
 }
 #jqt .button.active, 
 #jqt .button:hover, 
@@ -73,6 +81,7 @@ div#jqt.landscape .toolbar > h1 {
 #jqt .add:hover, 
 #jqt .add.active {
     -webkit-border-image: url(img/buttonActive.png) 0 5 0 5;
+    -moz-border-image: url(img/buttonActive.png) 0 5 0 5;
 }
 #jqt .back {
     left: 6px;
@@ -81,9 +90,11 @@ div#jqt.landscape .toolbar > h1 {
     max-width: 55px;
     border-width: 0 8px 0 14px;
     -webkit-border-image: url(img/backButton.png) 0 8 0 14;
+    -moz-border-image: url(img/backButton.png) 0 8 0 14;
 }
 #jqt .back.active, #jqt .back:hover {
     -webkit-border-image: url(img/backButtonActive.png) 0 8 0 14;
+    -moz-border-image: url(img/backButtonActive.png) 0 8 0 14;
 }
 #jqt .leftButton, #jqt .cancel {
     left: 6px;
@@ -96,12 +107,14 @@ div#jqt.landscape .toolbar > h1 {
 }
 #jqt .bigButton {
     -webkit-border-image: url(img/bigButton.png) 0 12 0 12;
+    -moz-border-image: url(img/bigButton.png) 0 12 0 12;
     border-width: 0 12px;
     color: #000000;
     display: block;
     font-size: 20px;
     font-weight: bold;
     line-height: 46px;
+    height: 46px;
     text-align: center;
     text-decoration: inherit;
     text-shadow: rgba(255,255,255,.8) 0 1px 0;
@@ -110,6 +123,7 @@ div#jqt.landscape .toolbar > h1 {
 #jqt .bigButton:active, 
 #jqt .bigButton:hover {
     -webkit-border-image: url(img/bigButtonActive.png) 0 12 0 12;
+    -moz-border-image: url(img/bigButtonActive.png) 0 12 0 12;
     color: #000000;
 }
 
@@ -128,16 +142,22 @@ div#jqt.landscape .toolbar > h1 {
 }
 #jqt ul.rounded {
     -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
     -webkit-box-shadow: rgba(0,0,0,.3) 1px 1px 3px;
+    -moz-box-shadow: rgba(0,0,0,.3) 1px 1px 3px;
 }
 #jqt ul.rounded li:first-child, #jqt ul.rounded li:first-child a {
     border-top: 0;
     -webkit-border-top-left-radius: 8px;
     -webkit-border-top-right-radius: 8px;
+    -moz-border-radius-topleft: 8px;
+    -moz-border-radius-topright: 8px;
 }
 #jqt ul.rounded li:last-child, #jqt ul.rounded li:last-child a {
     -webkit-border-bottom-left-radius: 8px;
     -webkit-border-bottom-right-radius: 8px;
+    -moz-border-radius-bottomleft: 8px;
+    -moz-border-radius-bottomright: 8px;
 }
 #jqt ul li {
     color: #666;
@@ -146,6 +166,7 @@ div#jqt.landscape .toolbar > h1 {
     list-style-type: none;
     padding: 10px 10px 10px 10px;
     background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#4c4d4e), to(#404142));
+    background-image: -moz-linear-gradient(-90deg, #4c4d4e, #404142);
     overflow: hidden;
 }
 #jqt ul li.arrow {
@@ -161,6 +182,7 @@ div#jqt.landscape .toolbar > h1 {
 
 #jqt ul li.forward {
     background-image: url(img/chevronCircle.png), -webkit-gradient(linear, 0% 0%, 0% 100%, from(#4c4d4e), to(#404142));
+    background-image: url(img/chevronCircle.png), -moz-linear-gradient(-90deg, #4c4d4e, #404142);
     background-position: right center;
     background-repeat: no-repeat;
 }
@@ -272,6 +294,7 @@ div#jqt.landscape .toolbar > h1 {
     margin-left: 0px;
     width: 100%;
     -webkit-appearance: textarea;
+    -moz-appearance: textarea;
 }
 #jqt ul li textarea {
     height: 120px;
@@ -282,6 +305,7 @@ div#jqt.landscape .toolbar > h1 {
     text-indent: 0px;
     background: transparent url(img/chevron.png) no-repeat right center;
     -webkit-appearance: textfield;
+    -moz-appearance: textfield;
     margin-left: -6px;
     width: 104%;
 }
@@ -321,11 +345,13 @@ div#jqt.landscape .toolbar > h1 {
     background: rgba(0,0,0,.15);
     color: #fff;
     -webkit-border-radius: 11px;
+    -moz-border-radius: 11px;
     padding: 4px 10px 5px 10px;
     display: block;
     width: auto;
     margin-top: -22px;
     -webkit-box-shadow: rgba(255,255,255,.1) 0 1px 0;
+    -moz-box-shadow: rgba(255,255,255,.1) 0 1px 0;
 }
 #jqt ul li.arrow small.counter {
     margin-right: 15px;
@@ -339,6 +365,7 @@ div#jqt.landscape .toolbar > h1 {
     overflow: hidden;
     padding-bottom: 3px;
     -webkit-box-shadow: none;
+    -moz-box-shadow: none;
 }
 #jqt ul.individual li {
     background: #4c4d4e;
@@ -346,13 +373,17 @@ div#jqt.landscape .toolbar > h1 {
     font-size: 14px;
     text-align: center;
     -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
     -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     width: 48%;
     float: left;
     display: block;
     padding: 11px 10px 14px 10px;
     -webkit-box-shadow: rgba(0,0,0,.2) 1px 1px 3px;
+    -moz-box-shadow: rgba(0,0,0,.2) 1px 1px 3px;
     background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#4c4d4e), to(#404142));
+    background: -moz-linear-gradient(-90deg, #4c4d4e, #404142);
 }
 #jqt ul.individual li + li {
     float: right;
@@ -382,6 +413,9 @@ div#jqt.landscape .toolbar > h1 {
     -webkit-border-radius: 5px;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     -webkit-transition: left .15s;
+    -moz-appearance: textarea;
+    -moz-border-radius: 5px;
+    -moz-transition: left .15s;
     background-color: transparent;
     background: #fff url(img/toggleSwitch.png) 0 0 no-repeat;
     border: 0;
@@ -397,6 +431,7 @@ div#jqt.landscape .toolbar > h1 {
 /* @group Info */
 #jqt .info {
     background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ccc), to(#aaa), color-stop(.6,#CCCCCC));
+    background: -moz-linear-gradient(-90deg, #ccc, #aaa);
     border-top: 1px solid rgba(255,255,255,.2);
     color: #444;
     font-size: 12px;
@@ -415,6 +450,7 @@ div#jqt.landscape .toolbar > h1 {
 }
 #jqt ul.edgetoedge li {
     background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#1e1f21), to(#272729));
+    background: -moz-linear-gradient(-90deg, #1e1f21, #272729);
     border-bottom: 2px solid #000;
     border-top: 1px solid #4a4b4d;
     font-size: 20px;
@@ -428,6 +464,7 @@ div#jqt.landscape .toolbar > h1 {
 }
 #jqt ul.edgetoedge li.sep {
     background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(0,0,0,0)), to(rgba(0,0,0,.5)));
+    background: -moz-linear-gradient(-90deg, rgba(0,0,0,0), rgba(0,0,0,.5));
     border-bottom: 1px solid #111113;
     border-top: 1px solid #666;
     color: #3e9ac3;
@@ -512,6 +549,7 @@ div#jqt.landscape .toolbar > h1 {
     border-bottom: 1px solid #666;
     font-size: 26px;
     background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(238,238,238,1)), to(rgba(156,158,160,1)));
+    background: -moz-linear-gradient(-90deg, rgba(238,238,238,1), rgba(156,158,160,1));
 }
 #jqt ul.metal li a {
     line-height: 26px;
@@ -541,6 +579,7 @@ div#jqt.landscape .toolbar > h1 {
     background-position: right center;
     background-repeat: no-repeat;
     background-image: url(img/chevron.png), -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(238,238,238,1)), to(rgba(156,158,160,1)));
+    background-image: url(img/chevron.png), -moz-linear-gradient(-90deg, rgba(238,238,238,1), rgba(156,158,160,1));
     background-repeat: no-repeat;
     background-position: right center;
 }
@@ -551,7 +590,9 @@ div#jqt.landscape .toolbar > h1 {
 /* @end */
 input[type='submit'] {
     -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
     background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(238,238,238,1)), to(rgba(156,158,160,1)));
+    background: -moz-linear-gradient(-90deg, rgba(238,238,238,1), rgba(156,158,160,1));
     border: 1px outset black;
     display: block;
     font-size: inherit;
